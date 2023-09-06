@@ -3,7 +3,8 @@ import socks
 import socket
 import time
 import os
-import datetime
+from datetime import datetime
+
 def buster():
     os.system("cls")
 
@@ -96,6 +97,10 @@ def buster():
 
     if not any_proxy_successful:
         print("No proxy connection was successful. Script will not run.")
+        time.sleep(3)
+        exit()
+    input("Hits saved, press ENTER to close. . .")
+    exit()
 
 def proxylessbuster():
     current_datetime = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -155,3 +160,5 @@ def proxylessbuster():
         print(f"Error reading logs.txt: {str(e)}")
 
     hits.close()
+    input("Hits saved, press ENTER to close. . .")
+    exit()
